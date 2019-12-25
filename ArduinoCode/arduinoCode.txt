@@ -1,4 +1,4 @@
-#codes taking two parameter with order and check the our parameter
+//codes taking two parameter with order and check the our parameter
 #include <ESP8266WiFi.h>
 const char* ssid = "proje";
 const char* password =  "aaaa1234";
