@@ -39,22 +39,21 @@ port =6896
 s.connect((host,port))
 
 def ts(str):
-   s.send('e'.encode())
-
-
+   s.send('w'.encode())
    data = ''
    data = s.recv(2048).decode()
+   print("Water Sensor Value : ","<",data,">")
+#data=''
+def tss(str):
+   s.send('f'.encode())
+   data1 = ''
+   data1 = s.recv(2048).decode()
+   print("Flame Sensor Value : ","<",data1,">")
+   #1 its okey there is not flame in environment
 
-
-
-   print(data[0:]+"\n")
-
-data=''
-
-
+#data = ''
 while 2:
    r = input('enter')
    ts(s)
+   tss(s)
 s.close ()
-
-#hi world to try
