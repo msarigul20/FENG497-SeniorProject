@@ -23,5 +23,5 @@ def tss(str):
 while 2:
    r = input('enter')
    ts(s)
-   tss(s)
+
 s.close ()
