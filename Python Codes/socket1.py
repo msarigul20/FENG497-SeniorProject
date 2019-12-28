@@ -19,6 +19,7 @@ def tss(str):
    #1 its okey there is not flame in environment
 
 #data = ''
+
 while 2:
    r = input('enter')
    ts(s)
