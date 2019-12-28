@@ -1,4 +1,5 @@
-//codes taking two parameter with order and check the our parameter
+//this code works with 2 sensors which are water and flame.
+//USE WEMOS D1 R1
 #include <ESP8266WiFi.h>
 const char* ssid = "proje";
 const char* password =  "aaaa1234";
@@ -29,18 +30,20 @@ void loop() //*******************************************
         char f ='f';
         Serial.println(c);
         if (c == w) {
-          Serial.println("----");
+          Serial.println("**********************************");
+          Serial.print("Came from client to respond by server for water : ");
           Serial.println(c);
           int data = analogRead(A0);
-          Serial.println("WATER VALUE: ");
+          Serial.print("WATER VALUE: ");
           Serial.println(data);
           client.print(data);
         }
         if (c == f) {
-          Serial.println("----");
+          Serial.println("**********************************");
+          Serial.print("Came from client to respond by server for flame : ");
           Serial.println(c);
           int data1=digitalRead(flame_sensor) ;
-          Serial.println("FLAME VALUE: ");
+          Serial.print("FLAME VALUE: ");
           Serial.println(data1);
           client.print(data1);
         }
