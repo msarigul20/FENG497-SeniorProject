@@ -6,17 +6,29 @@ host ="192.168.2.4"
 port =6896
 s.connect((host,port))
 
-#second socket created
-s2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-host2 ="192.168.2.5"
-port2 =6897
+
+s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+host2 ="192.168.2.6"
+port2 =6898
 s2.connect((host2,port2))
+
+
+#second socket created
+#s2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+#host2 ="192.168.2.6"
+#port2 =6897
+#s2.connect((host2,port2))
+
+
+
+
+
 #functions for measuring the sensors (wemos)
 def ts(str):
    s.send('w'.encode())
    data = ''
    data = s.recv(2048).decode()
-   print("Water Sensor Value : ","<",data,">")
+   print("WATER Sensor Value : ","<",data,">")
 #data=''
 def tss(str):
    s.send('f'.encode())
@@ -27,10 +39,10 @@ def tss(str):
 #data1 = ''
 #functions for measuring the sensors (node)
 def tsss(str):
-   s2.send('a'.encode())
+   s2.send('w'.encode())
    data2 = ''
    data2 = s2.recv(2048).decode()
-   print("CO Sensor Value : ","<",data2,">")
+   print("LDR Sensor Value : ","<",data2,">")
 #data2=''
 #our main loop
 while 2:
