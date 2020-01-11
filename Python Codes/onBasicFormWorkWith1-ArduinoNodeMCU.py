@@ -8,7 +8,7 @@ s.connect((host,port))
 
 #second socket created
 s2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-host2 ="192.168.2.5"
+host2 ="192.168.2.6"
 port2 =6897
 s2.connect((host2,port2))
 #functions for measuring the sensors (wemos)
